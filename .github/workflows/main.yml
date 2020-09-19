@@ -6,8 +6,6 @@ on:
 
 jobs:
   multi:
-    env:
-      TAG: ${{ env.GITHUB_RUN_ID }}
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -63,6 +61,8 @@ jobs:
 
       - name: Build and push
         uses: docker/build-push-action@v2
+        env:
+          TAG: ${{ env.GITHUB_RUN_ID }}
         with:
           context: .
           file: ./Dockerfile
