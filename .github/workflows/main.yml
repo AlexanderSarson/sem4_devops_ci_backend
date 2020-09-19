@@ -64,8 +64,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64 # Remember image in dockerfile should also support these platforms
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/app:1.0.0
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:latest 
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ GITHUB_RUN_ID }}
