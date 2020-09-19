@@ -4,7 +4,7 @@ on:
   push:
     branches: master
 env:
-  TAG: ${{ env.GITHUB_RUN_ID }}
+  TAG: "${{ env.GITHUB_RUN_ID }}"
 jobs:
   multi:
     runs-on: ubuntu-latest
