@@ -3,9 +3,11 @@ name: ci
 on:
   push:
     branches: master
-
+env:
+  TAG: ${{ env.GITHUB_RUN_ID }}
 jobs:
   multi:
+
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -68,4 +70,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:latest 
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ env.GITHUB_RUN_ID }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ env.TAG }}
