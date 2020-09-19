@@ -3,11 +3,11 @@ name: ci
 on:
   push:
     branches: master
-env:
-  TAG: ${{ env.GITHUB_RUN_ID }}
+
 jobs:
   multi:
-
+    env:
+      TAG: ${{ env.GITHUB_RUN_ID }}
     runs-on: ubuntu-latest
     services:
       mysql:
