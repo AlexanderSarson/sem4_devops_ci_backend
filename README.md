@@ -21,7 +21,7 @@
 ## Sonarcloud
 1. Opret en konto på sonarcloud.io med en github konto
 2. Følg anvisningerne
-3. ??
+3. Der burde være en indstilling til, at når man første gang opretter et projekt at man skal give adgang til ens github konto
 
 ## Nyt projekt på sonarcloud
 1. Klik på Krydset ved siden af din konto oppe i højre hjørne
