@@ -69,3 +69,5 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:latest 
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ github.run_id }}
+
+      # ${{ github.sha }} Brug denne hvis man hellere vil tagge image med git commit sha

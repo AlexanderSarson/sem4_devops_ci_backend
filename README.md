@@ -24,6 +24,7 @@
 3. Der burde være en indstilling til, at når man første gang opretter et projekt at man skal give adgang til ens github konto
 
 ## Nyt projekt på sonarcloud
+- Husk at <name/> i pom.xml filen bliver navnet på projektet i sonarcloud
 1. Klik på Krydset ved siden af din konto oppe i højre hjørne
 2. Scroll ned og vælg dit github repository
 3. Klik på 'Set Up'
