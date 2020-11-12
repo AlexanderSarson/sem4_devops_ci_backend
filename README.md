@@ -6,13 +6,13 @@
 3. Klik på fanen 'Security'
 4. Klik på 'New Access Token'
 5. indtast 'Github Actions' og klik create
-6. Kopier og gem denne access token
+6. Kopier og gem denne access token (denne har samme vigtighed, som jeres SSH keys, og SKAL gemmes)
 
 ## Nyt repo
-1. lav et nyt github repository med start koden.
-2. Gå ind på settings/secrets
-3. Klik på 'New secret'
-4. indtast 'DOCKERHUB_IMAGENAME' under Name og sæt value til dit image navn og klik 'Add secret'
+1. lav et nyt github repository med start koden. (husk at slette .git, så du kan lave git init) (H)
+2. Klik settings fanen og derefter secrets under dit repository på github.com
+3. Klik på 'New repository secret'
+4. indtast 'DOCKERHUB_IMAGENAME' under Name og sæt value til et navn, som bliver dit imagename(imagename SKAL være med lowercase) og klik 'Add secret'
 5. gør dette for følgende 2 værdier:
 * Name = DOCKERHUB_TOKEN   Value = Access Token som du har oprettet på dockerhub
 * Name = DOCKERHUB_USERNAME   value = dit dockerhub brugernavn
