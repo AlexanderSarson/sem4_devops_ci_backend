@@ -2,7 +2,9 @@ name: ci
 
 on:
   push:
-    branches: master
+    branches: 
+      - master
+      - main
 
 jobs:
   multi:
@@ -69,8 +71,6 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64 # Remember base image in dockerfile should also support these platforms
           push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:latest 
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ github.run_id }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:latest,${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ github.run_id }}
 
       # ${{ github.sha }} Brug denne hvis man hellere vil tagge image med git commit sha
